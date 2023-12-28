@@ -3,7 +3,6 @@
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image'
 import styles from "./page.module.css";
-import Navbar from '../components/Navbar';
 
 const mapValue = (value, inMin, inMax, outMin, outMax) => {
   return ((value - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
@@ -60,7 +59,6 @@ export default function Home() {
         />
 
     <div className={styles.movingPage}>
-    <Navbar/>
       <div className={styles.see}>SEE</div>
       <div className={styles.share}>SHARE</div>
       <div className={styles.innovate}>INNOVATE</div>

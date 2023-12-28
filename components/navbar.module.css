@@ -1,6 +1,5 @@
 .techlogo {
     position: relative;
-    top: 1rem;
     right: 5.3rem; 
     width: 5.88rem;
     height: 4.88rem;
@@ -19,9 +18,9 @@
   }
   
   .homeParent {
+    background: purple;
     position: fixed;
     width: 100%;
-    top: 1rem;
     display: flex;
     flex-direction: row;
     align-items: center;

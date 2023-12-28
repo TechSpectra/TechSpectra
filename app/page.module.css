@@ -95,6 +95,7 @@
   left: 2.5rem;
   width: 36rem;
 }
+
 .innovate {
   top: 40.44rem;
   right: 6rem;
@@ -113,6 +114,18 @@
 }
 
 /* Add animation styles */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(300px); /* Start from right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move to the original position */
+  }
+}
+
+/* Add animation styles */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -124,8 +137,12 @@
   }
 }
 
-.animate > div {
-  animation: fadeIn 1s ease-in-out; /* Adjust the duration and timing function as needed */
+.animate1 {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.animate2 {
+  animation: fadeInRight 1s ease-in-out;
 }
 
 .movingPage2 {

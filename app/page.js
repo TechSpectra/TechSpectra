@@ -40,13 +40,17 @@ export default function Home() {
         imageRef.current.style.opacity = opacity;
       }
       if (scrollTop >= 450) {
-        setAnimateMovingPage(true);
-        setImageVisible(false);
         setNavbarVisible(true);
+        setImageVisible(false);
+        if (!animateMovingPage) {
+          setAnimateMovingPage(true);
+        }
       } else {
-        setAnimateMovingPage(false);
-        setImageVisible(true);
         setNavbarVisible(false);
+        setImageVisible(true);
+        if (animateMovingPage) {
+          setAnimateMovingPage(false);
+        }
       }
     };
 
@@ -78,22 +82,30 @@ export default function Home() {
           priority
         />
       )}
-      <div
-        className={`${styles.movingPage} ${
-          animateMovingPage ? styles.animate : ""
-        }`}
-      >
+      <div className={styles.movingPage}>
         {navbarVisible && (
           <>
-            <div className={styles.see}>
+            <div
+              className={`${styles.see} ${
+                animateMovingPage ? styles.animate1 : ""
+              }`}
+            >
               SEE
               <img alt="Eye Logo" src="/eye.svg" height={170} width={170} />
             </div>
-            <div className={styles.share}>
+            <div
+              className={`${styles.share} ${
+                animateMovingPage ? styles.animate2 : ""
+              }`}
+            >
               SHARE
               <img alt="Share Logo" src="/share.svg" height={115} width={115} />
             </div>
-            <div className={styles.innovate}>
+            <div
+              className={`${styles.innovate} ${
+                animateMovingPage ? styles.animate1 : ""
+              }`}
+            >
               <img
                 alt="Innovate Logo"
                 src="/innovate.svg"

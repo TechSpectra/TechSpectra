@@ -17,6 +17,7 @@ export default function Home() {
   const [topPosition, setTopPosition] = useState(0);
   const [imageVisible, setImageVisible] = useState(true);
   const [navbarVisible, setNavbarVisible] = useState(false);
+  const [animateMovingPage, setAnimateMovingPage] = useState(false);
   const imageRef = useRef();
 
   useEffect(() => {
@@ -39,9 +40,11 @@ export default function Home() {
         imageRef.current.style.opacity = opacity;
       }
       if (scrollTop >= 450) {
+        setAnimateMovingPage(true);
         setImageVisible(false);
         setNavbarVisible(true);
       } else {
+        setAnimateMovingPage(false);
         setImageVisible(true);
         setNavbarVisible(false);
       }
@@ -75,25 +78,34 @@ export default function Home() {
           priority
         />
       )}
-      <div className={styles.movingPage}>
-        <div className={styles.see}>
-          SEE
-          <img alt="Eye Logo" src="/eye.svg" height={170} width={170} />
-        </div>
-        <div className={styles.share}>
-          SHARE
-          <img alt="Share Logo" src="/share.svg" height={115} width={115} />
-        </div>
-        <div className={styles.innovate}>
-          <img
-            alt="Innovate Logo"
-            src="/innovate.svg"
-            height={190}
-            width={155}
-          />
-          INNOVATE
-        </div>
+      <div
+        className={`${styles.movingPage} ${
+          animateMovingPage ? styles.animate : ""
+        }`}
+      >
+        {navbarVisible && (
+          <>
+            <div className={styles.see}>
+              SEE
+              <img alt="Eye Logo" src="/eye.svg" height={170} width={170} />
+            </div>
+            <div className={styles.share}>
+              SHARE
+              <img alt="Share Logo" src="/share.svg" height={115} width={115} />
+            </div>
+            <div className={styles.innovate}>
+              <img
+                alt="Innovate Logo"
+                src="/innovate.svg"
+                height={190}
+                width={155}
+              />
+              INNOVATE
+            </div>
+          </>
+        )}
       </div>
+
       <div className={styles.movingPage2}></div>
       <div className={styles.movingPage3}></div>
       <div className={styles.movingPage4}></div>

@@ -111,6 +111,23 @@
   color: #fff;
   font-family: Montserrat;
 }
+
+/* Add animation styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-300px); /* Start from left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move to the original position */
+  }
+}
+
+.animate > div {
+  animation: fadeIn 1s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
 .movingPage2 {
   top: 104rem;
 }

@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image'
 import styles from "./page.module.css";
+import Navbar from '../components/Navbar';
 
 const mapValue = (value, inMin, inMax, outMin, outMax) => {
   return ((value - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
@@ -53,6 +54,7 @@ export default function Home() {
       <div className={styles.curate}>CURATE</div>
       <div className={styles.theWorldOf}>{`THE WORLD OF ARTIFICIAL INTELLIGENCE & OPEN SOURCE`}</div>
     </div>
+<<<<<<< HEAD
     {imageVisible && (
       <Image
         ref={imageRef}
@@ -66,6 +68,21 @@ export default function Home() {
       />
     )}
     <div className={styles.movingPage}> 
+=======
+    <Image
+          ref={imageRef}
+          className={styles.faceimage}
+          style={{ top: `${50 - topPosition}%` }}
+          src="/faceimage.svg"
+          alt="Face Logo"
+          width={imageDimensions.width}
+          height={imageDimensions.height}
+          priority
+        />
+
+    <div className={styles.movingPage}>
+    <Navbar/>
+>>>>>>> 370afbc85ebc440d8f2c6135e277f4437c09778a
       <div className={styles.see}>SEE</div>
       <div className={styles.share}>SHARE</div>
       <div className={styles.innovate}>INNOVATE</div>

@@ -19,14 +19,17 @@
   }
   
   .homeParent {
-    position: absolute;
+    position: fixed;
     width: 100%;
-    top: 4rem;
+    top: 1rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center; /* Align items to the right */
     gap: 2.38rem;
     font-size: var(--font-size-lg);
+    z-index: 2;
+    color: #fff;
+    font-family: Montserrat;
   }
   

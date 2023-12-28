@@ -13,6 +13,7 @@ export default function Home() {
   const [imageDimensions, setImageDimensions] = useState({ width: 644, height: 300 });
   const [topPosition, setTopPosition] = useState(0);
   const [imageVisible, setImageVisible] = useState(true);
+  const [navbarVisible, setNavbarVisible] = useState(false);
   const imageRef = useRef();
 
   useEffect(() => {
@@ -36,8 +37,10 @@ export default function Home() {
       }
       if (scrollTop >= 450) {
         setImageVisible(false);
+        setNavbarVisible(true);
       } else {
         setImageVisible(true);
+        setNavbarVisible(false);
       }
     };
 
@@ -50,6 +53,7 @@ export default function Home() {
 
   return (
     <>
+    {navbarVisible && (<Navbar/>)}
     <div className={styles.landingPage}>
       <div className={styles.curate}>CURATE</div>
       <div className={styles.theWorldOf}>{`THE WORLD OF ARTIFICIAL INTELLIGENCE & OPEN SOURCE`}</div>
@@ -67,7 +71,6 @@ export default function Home() {
       />
     )} 
     <div className={styles.movingPage}>
-      <Navbar/>
       <div className={styles.see}>SEE</div>
       <div className={styles.share}>SHARE</div>
       <div className={styles.innovate}>INNOVATE</div>

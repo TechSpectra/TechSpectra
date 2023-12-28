@@ -58,7 +58,7 @@ export default function Home() {
       <Image
         ref={imageRef}
         className={styles.faceimage}
-        style={{ top: `${60 - topPosition}%` }}
+        style={{ top: `${55 - topPosition}%` }}
         src="/faceimage.svg"
         alt="Face Logo"
         width={imageDimensions.width}

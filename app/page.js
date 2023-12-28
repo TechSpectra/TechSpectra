@@ -11,6 +11,7 @@ const mapValue = (value, inMin, inMax, outMin, outMax) => {
 export default function Home() {
   const [imageDimensions, setImageDimensions] = useState({ width: 644, height: 300 });
   const [topPosition, setTopPosition] = useState(0);
+  const [imageVisible, setImageVisible] = useState(true);
   const imageRef = useRef();
 
   useEffect(() => {
@@ -32,6 +33,11 @@ export default function Home() {
       if (imageRef.current) {
         imageRef.current.style.opacity = opacity;
       }
+      if (scrollTop >= 400) {
+        setImageVisible(false);
+      } else {
+        setImageVisible(true);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -47,40 +53,30 @@ export default function Home() {
       <div className={styles.curate}>CURATE</div>
       <div className={styles.theWorldOf}>{`THE WORLD OF ARTIFICIAL INTELLIGENCE & OPEN SOURCE`}</div>
     </div>
-    <Image
-          ref={imageRef}
-          className={styles.faceimage}
-          style={{ top: `${50 - topPosition}%` }}
-          src="/faceimage.svg"
-          alt="Face Logo"
-          width={imageDimensions.width}
-          height={imageDimensions.height}
-          priority
-        />
-    <div className={styles.movingPage}>
+    {imageVisible && (
+      <Image
+        ref={imageRef}
+        className={styles.faceimage}
+        style={{ top: `${50 - topPosition}%` }}
+        src="/faceimage.svg"
+        alt="Face Logo"
+        width={imageDimensions.width}
+        height={imageDimensions.height}
+        priority
+      />
+    )}
+    <div className={styles.movingPage}> 
       <div className={styles.see}>SEE</div>
       <div className={styles.share}>SHARE</div>
       <div className={styles.innovate}>INNOVATE</div>
     </div>
     <div className={styles.movingPage2}>
-      <div className={styles.see}>SEE</div>
-      <div className={styles.share}>SHARE</div>
-      <div className={styles.innovate}>INNOVATE</div>
     </div>
     <div className={styles.movingPage3}>
-      <div className={styles.see}>SEE</div>
-      <div className={styles.share}>SHARE</div>
-      <div className={styles.innovate}>INNOVATE</div>
     </div>
     <div className={styles.movingPage4}>
-      <div className={styles.see}>SEE</div>
-      <div className={styles.share}>SHARE</div>
-      <div className={styles.innovate}>INNOVATE</div>
     </div>
     <div className={styles.movingPage5}>
-      <div className={styles.see}>SEE</div>
-      <div className={styles.share}>SHARE</div>
-      <div className={styles.innovate}>INNOVATE</div>
     </div>
     </>
   );

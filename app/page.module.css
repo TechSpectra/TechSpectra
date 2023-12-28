@@ -7,9 +7,10 @@
   font-size: 0.9375rem;
   color: #fff;
   font-family: Montserrat;
-  background: 
+  background: #000000;
+  /* background: 
     radial-gradient(circle at 6% 0%, rgba(87, 42, 16, 1) 0%, rgba(0, 0, 0, 0) 27%),
-    radial-gradient(circle at 92% 100%, rgba(87, 42, 16, 1) 0%, rgba(0, 0, 0, 1) 15%);
+    radial-gradient(circle at 92% 100%, rgba(87, 42, 16, 1) 0%, rgba(0, 0, 0, 1) 15%); */
 }
 
 .curate {
@@ -44,7 +45,7 @@
 
 .faceimage {
   display:flex;
-  position: relative;
+  position: fixed;
   align-items: center;
   justify-content: center;
   left :50%;
@@ -52,9 +53,12 @@
   z-index: 1;
 }
 
-.movingPage {
+.movingPage,
+.movingPage2, 
+.movingPage3,
+.movingPage4,
+.movingPage5 {
   position: absolute;
-  top: 40rem;
   width: 100%;
   height: 40rem;
   overflow: hidden;
@@ -63,17 +67,21 @@
   color: #fff;
   font-family: Montserrat;
   z-index: 0;
+  background: #000000;
 }
 
+.movingPage {
+  top: 40rem;
+}
 .movingPage2 {
-  position: absolute;
   top: 80rem;
-  width: 100%;
-  height: 40rem;
-  overflow: hidden;
-  text-align: center;
-  font-size: 0.9375rem;
-  color: #fff;
-  font-family: Montserrat;
-  z-index: 0;
+}
+.movingPage3 {
+  top: 120rem;
+}
+.movingPage4 {
+  top: 160rem;
+}
+.movingPage5 {
+  top: 200rem;
 }

@@ -1,5 +1,5 @@
 .landingPage {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 40rem;
   overflow: hidden;
@@ -13,12 +13,13 @@
 }
 
 .curate {
+  position: absolute;
   font-family: Oswald;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 10.38rem;
-  left: calc(50% - 387px);
+  top: 0.1rem;
+  left: calc(50% - 385px);
   font-size: 11.25rem;
   font-weight: 300;
   font-family: Oswald;
@@ -34,10 +35,17 @@
   z-index: 1;
 }
 
+.theWorldOf {
+  position: relative;
+  top: 35%;
+  left: 1%; /* Add unit (e.g., px) */
+  z-index: 1;
+}
+
 .faceimage {
-  position: absolute;
-  bottom: 50px; /* Add unit (e.g., px) */
-  left: 50%;
+  position: relative;
+  top: 50%; /* Add unit (e.g., px) */
+  left: 27%;
   transform: translateX(-50%);
-  z-index: 0; /* Add a z-index for stacking order */
+  z-index: 1;
 }

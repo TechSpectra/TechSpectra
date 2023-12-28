@@ -19,6 +19,13 @@
   background: 
     radial-gradient(circle at 6% 0%, rgba(87, 42, 16, 1) 0%, rgba(0, 0, 0, 0) 27%),
     radial-gradient(circle at 92% 100%, rgba(87, 42, 16, 1) 0%, rgba(0, 0, 0, 1) 15%); 
-  z-index: 1;
+}
+
+.faceimage {
+  position: absolute;
+  top: 30rem;
+  left: calc(50% - 481px);
+  object-fit: cover;
+  mix-blend-mode: normal;
 }
 

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -5,6 +6,14 @@ export default function Home() {
     <div className={styles.landingPage}>
       <div className={styles.curate}>CURATE</div>
       <div className={styles.theWorldOf}>{`THE WORLD OF ARTIFICIAL INTELLIGENCE & OPEN SOURCE`}</div>
+      <Image
+          className={styles.faceimage}
+          src="/faceimage.svg"
+          alt="Face Logo"
+          width={962.08}
+          height={1088}
+          priority
+        />
     </div>
   );
 }

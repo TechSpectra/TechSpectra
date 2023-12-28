@@ -34,7 +34,7 @@ export default function Home() {
       if (imageRef.current) {
         imageRef.current.style.opacity = opacity;
       }
-      if (scrollTop >= 400) {
+      if (scrollTop >= 450) {
         setImageVisible(false);
       } else {
         setImageVisible(true);
@@ -58,26 +58,14 @@ export default function Home() {
       <Image
         ref={imageRef}
         className={styles.faceimage}
-        style={{ top: `${50 - topPosition}%` }}
+        style={{ top: `${60 - topPosition}%` }}
         src="/faceimage.svg"
         alt="Face Logo"
         width={imageDimensions.width}
         height={imageDimensions.height}
         priority
       />
-    )}
-    <div className={styles.movingPage}> 
-    <Image
-          ref={imageRef}
-          className={styles.faceimage}
-          style={{ top: `${50 - topPosition}%` }}
-          src="/faceimage.svg"
-          alt="Face Logo"
-          width={imageDimensions.width}
-          height={imageDimensions.height}
-          priority
-        />
-    </div>
+    )} 
     <div className={styles.movingPage}>
       <Navbar/>
       <div className={styles.see}>SEE</div>

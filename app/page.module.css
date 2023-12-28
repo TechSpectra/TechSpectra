@@ -1,5 +1,5 @@
 .landingPage {
-  background: radial-gradient(circle at 92% 100%, rgba(87, 42, 16, 1) 0%, rgba(0, 0, 0, 1) 15%);
+  position: relative;
   width: 100%;
   height: 40rem;
   overflow: hidden;
@@ -8,3 +8,17 @@
   color: #fff;
   font-family: Montserrat;
 }
+
+.landingPage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 6% 0%, rgba(87, 42, 16, 1) 0%, rgba(0, 0, 0, 0) 27%),
+    radial-gradient(circle at 92% 100%, rgba(87, 42, 16, 1) 0%, rgba(0, 0, 0, 1) 15%); 
+  z-index: 1;
+}
+

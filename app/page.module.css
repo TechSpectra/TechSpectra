@@ -23,9 +23,9 @@
 
 .faceimage {
   position: absolute;
-  top: 30rem;
-  left: calc(50% - 481px);
-  object-fit: cover;
-  mix-blend-mode: normal;
+  bottom: 50;
+  padding-top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 

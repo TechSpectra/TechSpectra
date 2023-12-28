@@ -10,8 +10,8 @@ export default function Home() {
           className={styles.faceimage}
           src="/faceimage.svg"
           alt="Face Logo"
-          width={962.08}
-          height={1088}
+          width={544}
+          height={300}
           priority
         />
     </div>

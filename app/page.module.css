@@ -80,6 +80,7 @@
   align-items: center;
   height: 8.44rem;
   font-size: 9.38rem;
+  mix-blend-mode: luminosity;
 }
 
 .see {
@@ -96,7 +97,7 @@
 }
 .innovate {
   top: 40.44rem;
-  right: -3rem;
+  right: 6rem;
   text-align: right;
   width: 58.06rem;
 }

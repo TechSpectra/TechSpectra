@@ -1,16 +1,19 @@
-'use client'
+"use client";
 
-import { useEffect, useState, useRef } from 'react';
-import Image from 'next/image'
+import { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 import styles from "./page.module.css";
-import Navbar from '@/components/Navbar';
+import Navbar from "@/components/Navbar";
 
 const mapValue = (value, inMin, inMax, outMin, outMax) => {
   return ((value - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
 };
 
 export default function Home() {
-  const [imageDimensions, setImageDimensions] = useState({ width: 644, height: 300 });
+  const [imageDimensions, setImageDimensions] = useState({
+    width: 644,
+    height: 300,
+  });
   const [topPosition, setTopPosition] = useState(0);
   const [imageVisible, setImageVisible] = useState(true);
   const [navbarVisible, setNavbarVisible] = useState(false);
@@ -19,7 +22,7 @@ export default function Home() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      
+
       // Adjust the formulas as needed
       const newWidth = 644 + scrollTop * 0.5;
       const newHeight = 300 + scrollTop * 3;
@@ -44,45 +47,57 @@ export default function Home() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <>
-    {navbarVisible && (<Navbar/>)}
-    <div className={styles.landingPage}>
-      <div className={styles.curate}>CURATE</div>
-      <div className={styles.theWorldOf}>{`THE WORLD OF ARTIFICIAL INTELLIGENCE & OPEN SOURCE`}</div>
-    </div>
-    {imageVisible && (
-      <Image
-        ref={imageRef}
-        className={styles.faceimage}
-        style={{ top: `${55 - topPosition}%` }}
-        src="/faceimage.svg"
-        alt="Face Logo"
-        width={imageDimensions.width}
-        height={imageDimensions.height}
-        priority
-      />
-    )} 
-    <div className={styles.movingPage}>
-      <div className={styles.see}>SEE</div>
-      <div className={styles.share}>SHARE</div>
-      <div className={styles.innovate}>INNOVATE</div>
-    </div>
-    <div className={styles.movingPage2}>
-    </div>
-    <div className={styles.movingPage3}>
-    </div>
-    <div className={styles.movingPage4}>
-    </div>
-    <div className={styles.movingPage5}>
-    </div>
+      {navbarVisible && <Navbar />}
+      <div className={styles.landingPage}>
+        <div className={styles.curate}>CURATE</div>
+        <div
+          className={styles.theWorldOf}
+        >{`THE WORLD OF ARTIFICIAL INTELLIGENCE & OPEN SOURCE`}</div>
+      </div>
+      {imageVisible && (
+        <Image
+          ref={imageRef}
+          className={styles.faceimage}
+          style={{ top: `${55 - topPosition}%` }}
+          src="/faceimage.svg"
+          alt="Face Logo"
+          width={imageDimensions.width}
+          height={imageDimensions.height}
+          priority
+        />
+      )}
+      <div className={styles.movingPage}>
+        <div className={styles.see}>
+          SEE
+          <img alt="Eye Logo" src="/eye.svg" height={170} width={170} />
+        </div>
+        <div className={styles.share}>
+          SHARE
+          <img alt="Share Logo" src="/share.svg" height={115} width={115} />
+        </div>
+        <div className={styles.innovate}>
+          <img
+            alt="Innovate Logo"
+            src="/innovate.svg"
+            height={190}
+            width={155}
+          />
+          INNOVATE
+        </div>
+      </div>
+      <div className={styles.movingPage2}></div>
+      <div className={styles.movingPage3}></div>
+      <div className={styles.movingPage4}></div>
+      <div className={styles.movingPage5}></div>
     </>
   );
 }

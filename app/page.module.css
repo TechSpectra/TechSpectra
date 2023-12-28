@@ -79,6 +79,7 @@
   display: flex;
   align-items: center;
   height: 8.44rem;
+  font-size: 9.38rem;
 }
 
 .see {
@@ -106,7 +107,6 @@
   height: 64rem;
   overflow: hidden;
   text-align: left;
-  font-size: 9.38rem;
   color: #fff;
   font-family: Montserrat;
 }

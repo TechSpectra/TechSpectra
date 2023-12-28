@@ -91,12 +91,12 @@
 
 .share {
   top: calc(50% - 86px);
-  left: 6.38rem;
+  left: 2.5rem;
   width: 36rem;
 }
 .innovate {
   top: 40.44rem;
-  right: 6.38rem;
+  right: -3rem;
   text-align: right;
   width: 58.06rem;
 }

@@ -118,7 +118,7 @@ export default function Home() {
             </div>
             <div
               ref={innovateRef}
-              className={styles.innovate}
+              className={styles.explore}
             >
               <img
                 alt="Innovate Logo"
@@ -126,11 +126,11 @@ export default function Home() {
                 height={90}
                 width={95}
               />
-              INNOVATE
+              EXPLORE
             </div>
             <div
               ref={innovateRef}
-              className={styles.innovate}
+              className={styles.learn}
             >
               <img
                 alt="Innovate Logo"
@@ -138,7 +138,7 @@ export default function Home() {
                 height={90}
                 width={95}
               />
-              INNOVATE
+              LEARN
             </div>
             <div
               ref={innovateRef}

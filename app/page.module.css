@@ -72,6 +72,8 @@
 }
 
 .innovate,
+.learn,
+.explore,
 .see,
 .share {
   position: absolute;
@@ -92,12 +94,24 @@
 }
 
 .share {
+  top: 20.81rem;
+  width: 36rem;
+}
+
+.explore {
   top: 16.81rem;
   width: 36rem;
 }
 
-.innovate {
+.learn {
   top: 16.81rem;
+  right: -2rem;
+  text-align: right;
+  width: 36rem;
+}
+
+.innovate {
+  top: 20.81rem;
   right: -2rem;
   text-align: right;
   width: 58.06rem;

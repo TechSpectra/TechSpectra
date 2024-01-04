@@ -88,32 +88,36 @@
 
 .see {
   top: 12.81rem;
-  left: calc(50% - 254px);
+  left: calc(50% - 194px);
   text-align: center;
   width: 24.31rem;
 }
 
 .share {
   top: 20.81rem;
+  left: calc(50% - 194px);
+  text-align: center;
   width: 36rem;
 }
 
 .explore {
   top: 16.81rem;
+  left: calc(50% - 1px);
+  text-align: center;
   width: 36rem;
 }
 
 .learn {
   top: 16.81rem;
-  right: -2rem;
-  text-align: right;
+  left: calc(50% - 194px);
+  text-align: center;
   width: 36rem;
 }
 
 .innovate {
   top: 20.81rem;
-  right: -2rem;
-  text-align: right;
+  left: calc(50% - 194px);
+  text-align: center;
   width: 58.06rem;
 }
 

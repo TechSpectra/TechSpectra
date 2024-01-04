@@ -19,6 +19,8 @@ export default function Home() {
   const [navbarVisible, setNavbarVisible] = useState(false);
   const [animateMovingPage, setAnimateMovingPage] = useState(false);
   const imageRef = useRef();
+  const exploreRef = useRef();
+  const learnRef = useRef();
   const seeRef = useRef();
   const shareRef = useRef();
   const innovateRef = useRef();
@@ -47,6 +49,17 @@ export default function Home() {
       if (imageRef.current) {
         imageRef.current.style.opacity = opacity;
       }
+
+
+      if (exploreRef.current) {
+        exploreRef.current.style.opacity = exploreOpacity;
+      }
+
+
+      if (learnRef.current) {
+        learnRef.current.style.opacity = learnOpacity;
+      }
+
       if (seeRef.current) {
         seeRef.current.style.opacity = seeOpacity;
       }
@@ -117,7 +130,7 @@ export default function Home() {
               <img alt="Share Logo" src="/share.svg" height={50} width={50} />
             </div>
             <div
-              ref={innovateRef}
+              ref={exploreRef}
               className={styles.explore}
             >
               <img
@@ -129,7 +142,7 @@ export default function Home() {
               EXPLORE
             </div>
             <div
-              ref={innovateRef}
+              ref={learnRef}
               className={styles.learn}
             >
               <img

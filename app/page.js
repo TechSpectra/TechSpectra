@@ -39,26 +39,22 @@ export default function Home() {
       // Adjust the opacity based on scrollTop
       const opacity = mapValue(scrollTop, 0, 500, 1, 0);
       const seeOpacity = mapValue(scrollTop, 450, 700, 0, 1);
-      const shareOpacity = mapValue(scrollTop, 500, 700, 0, 1);
-      const innovateOpacity = mapValue(scrollTop, 600, 700, 0, 1);
-      const seeTransform = mapValue(scrollTop, 450, 700, -300, 0);
-      const shareTransform = mapValue(scrollTop, 500, 700, 300, 0);
-      const innovateTransform = mapValue(scrollTop, 600, 700, -300, 0);
+      const exploreOpacity = mapValue(scrollTop, 500, 700, 0, 1);
+      const learnOpacity = mapValue(scrollTop, 500, 700, 0, 1);
+      const shareOpacity = mapValue(scrollTop, 550, 700, 0, 1);
+      const innovateOpacity = mapValue(scrollTop, 550, 700, 0, 1);
 
       if (imageRef.current) {
         imageRef.current.style.opacity = opacity;
       }
       if (seeRef.current) {
         seeRef.current.style.opacity = seeOpacity;
-        seeRef.current.style.transform = `translateX(${seeTransform}px)`;
       }
       if (shareRef.current) {
         shareRef.current.style.opacity = shareOpacity;
-        shareRef.current.style.transform = `translateX(${shareTransform}px)`;
       }
       if (innovateRef.current) {
         innovateRef.current.style.opacity = innovateOpacity;
-        innovateRef.current.style.transform = `translateX(${innovateTransform}px)`;
       }
       if (scrollTop >= 450) {
         setNavbarVisible(true);
@@ -111,14 +107,14 @@ export default function Home() {
               className={styles.see}
             >
               SEE
-              <img alt="Eye Logo" src="/eye.svg" height={170} width={170} />
+              <img alt="Eye Logo" src="/eye.svg" height={70} width={70} />
             </div>
             <div
               ref={shareRef}
               className={styles.share}
             >
               SHARE
-              <img alt="Share Logo" src="/share.svg" height={115} width={115} />
+              <img alt="Share Logo" src="/share.svg" height={50} width={50} />
             </div>
             <div
               ref={innovateRef}
@@ -127,8 +123,32 @@ export default function Home() {
               <img
                 alt="Innovate Logo"
                 src="/innovate.svg"
-                height={190}
-                width={155}
+                height={90}
+                width={95}
+              />
+              INNOVATE
+            </div>
+            <div
+              ref={innovateRef}
+              className={styles.innovate}
+            >
+              <img
+                alt="Innovate Logo"
+                src="/innovate.svg"
+                height={90}
+                width={95}
+              />
+              INNOVATE
+            </div>
+            <div
+              ref={innovateRef}
+              className={styles.innovate}
+            >
+              <img
+                alt="Innovate Logo"
+                src="/innovate.svg"
+                height={90}
+                width={95}
               />
               INNOVATE
             </div>

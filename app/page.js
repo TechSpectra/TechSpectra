@@ -42,9 +42,9 @@ export default function Home() {
       const opacity = mapValue(scrollTop, 0, 500, 1, 0);
       const seeOpacity = mapValue(scrollTop, 450, 700, 0, 1);
       const exploreOpacity = mapValue(scrollTop, 500, 700, 0, 1);
-      const learnOpacity = mapValue(scrollTop, 500, 700, 0, 1);
+      const learnOpacity = mapValue(scrollTop, 550, 700, 0, 1);
       const shareOpacity = mapValue(scrollTop, 550, 700, 0, 1);
-      const innovateOpacity = mapValue(scrollTop, 550, 700, 0, 1);
+      const innovateOpacity = mapValue(scrollTop, 500, 700, 0, 1);
 
       if (imageRef.current) {
         imageRef.current.style.opacity = opacity;
@@ -126,9 +126,9 @@ export default function Home() {
               ref={shareRef}
               className={styles.share}
             >
-              SHARE
               <img alt="Share Logo" src="/share.svg" height={50} width={50} />
-            </div>
+              &nbsp;&nbsp;&nbsp;SHARE 
+              </div>
             <div
               ref={exploreRef}
               className={styles.explore}
@@ -145,25 +145,25 @@ export default function Home() {
               ref={learnRef}
               className={styles.learn}
             >
+            LEARN
               <img
                 alt="Innovate Logo"
                 src="/innovate.svg"
-                height={90}
+                height={91}
                 width={95}
               />
-              LEARN
             </div>
             <div
               ref={innovateRef}
               className={styles.innovate}
             >
+            INNOVATE
               <img
                 alt="Innovate Logo"
                 src="/innovate.svg"
                 height={90}
                 width={95}
               />
-              INNOVATE
             </div>
           </>
         )}

@@ -82,7 +82,7 @@
   align-items: center;
   justify-content: center;
   height: 6rem;
-  font-size: 3.38rem;
+  font-size: 2.2rem;
   mix-blend-mode: luminosity;
 }
 
@@ -94,29 +94,29 @@
 }
 
 .share {
-  top: 20.81rem;
-  left: calc(50% - 194px);
+  top: 34rem;
+  right: calc(50% + 220px);
   text-align: center;
-  width: 36rem;
+  width: 37rem;
 }
 
 .explore {
-  top: 16.81rem;
-  left: calc(50% - 1px);
+  top: 21rem;
+  right: calc(50% + 35px);
   text-align: center;
-  width: 36rem;
+  width: 40rem;
 }
 
 .learn {
-  top: 16.81rem;
-  left: calc(50% - 194px);
+  top: 34rem;
+  left: calc(50% + 220px);
   text-align: center;
-  width: 36rem;
+  width: 40rem;
 }
 
 .innovate {
-  top: 20.81rem;
-  left: calc(50% - 194px);
+  top: 21rem;
+  left: calc(50% - 120px);
   text-align: center;
   width: 58.06rem;
 }
